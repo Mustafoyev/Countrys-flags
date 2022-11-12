@@ -1,31 +1,29 @@
 import './card.css';
 import Germany from '../../assets/images/germany.png';
 
-const Card = () => {
+const Card = ({ name, img, population, region, capital }) => {
 	return (
-		<>
-			<li className='card__item'>
-				<img
-					className='card__item-img'
-					src={Germany}
-					alt='Germany'
-					width='267'
-					height='160'
-				/>
-				<div className='card__item-wrapper'>
-					<h3 className='card__item-title'>Germany</h3>
-					<span className='card__item-population'>
-						<strong>Population:</strong> 81,770,900
-					</span>
-					<span className='card__item-region'>
-						<strong>Region:</strong> Europe
-					</span>
-					<span className='card__item-capital'>
-						<strong>Capital:</strong> Berlin
-					</span>
-				</div>
-			</li>
-		</>
+		<li className='card__item'>
+			<img
+				className='card__item-img'
+				src={img}
+				alt={name}
+				width='267'
+				height='160'
+			/>
+			<div className='card__item-wrapper'>
+				<h3 className='card__item-title'>{name}</h3>
+				<span className='card__item-population'>
+					<strong>Population:</strong> {population}
+				</span>
+				<span className='card__item-region'>
+					<strong>Region:</strong> {region}
+				</span>
+				<span className='card__item-capital'>
+					<strong>Capital:</strong> {capital}
+				</span>
+			</div>
+		</li>
 	);
 };
 

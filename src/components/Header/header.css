@@ -17,3 +17,26 @@
 	line-height: 33px;
 	color: #111517;
 }
+
+.site-header__mode {
+	position: relative;
+	display: block;
+	padding-left: 28px;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 22px;
+	color: #111517;
+}
+
+.site-header__mode::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background-image: url('../../assets/images/mode.svg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	content: '';
+}

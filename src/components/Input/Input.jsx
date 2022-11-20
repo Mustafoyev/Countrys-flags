@@ -1,13 +1,15 @@
 import './input.css';
 
-const Input = () => {
+const Input = ({ inpValue }) => {
 	return (
 		<label className='input-label'>
 			<input
+				onChange={(evt) => inpValue(evt.target.value)}
 				className='input'
 				type='search'
 				placeholder='Search for a country…'
-				aria-label='Search for a countr'></input>
+				aria-label='Search for a countr'
+			/>
 		</label>
 	);
 };

@@ -5,6 +5,11 @@
 	border-radius: 5px;
 }
 
+.card__item-link {
+	text-decoration: none;
+	color: inherit;
+}
+
 .card__item-img {
 	display: block;
 	width: 100%;

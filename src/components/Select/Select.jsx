@@ -6,7 +6,7 @@ const Select = ({ selectVal }) => {
 			<select
 				className='select'
 				onChange={(evt) => selectVal(evt.target.value)}>
-				<option>Filter by Region</option>
+				<option value={'All'}>Filter by Region</option>
 				<option value={'Africa'}>Africa</option>
 				<option value={'America'}>America</option>
 				<option value={'Asia'}>Asia</option>

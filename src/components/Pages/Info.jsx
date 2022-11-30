@@ -132,7 +132,7 @@ const Info = () => {
 					))
 				) : (
 					<h1 className={`${theme === 'dark' ? 'error-dark' : 'error'}`}>
-						404 NOT FOUND
+						{lang('info.error')}
 					</h1>
 				)}
 			</div>

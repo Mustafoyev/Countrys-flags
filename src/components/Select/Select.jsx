@@ -1,12 +1,18 @@
 import './select.css';
+import { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
+import { useTranslation } from 'react-i18next';
 
 const Select = ({ selectVal }) => {
+	const { theme } = useContext(ThemeContext);
+	const [lang] = useTranslation();
+
 	return (
 		<>
 			<select
-				className='select'
+				className={`${theme === 'dark' ? 'sel-dark' : 'select'}`}
 				onChange={(evt) => selectVal(evt.target.value)}>
-				<option value={'All'}>Filter by Region</option>
+				<option value={'All'}>{lang('search.sel')}</option>
 				<option value={'Africa'}>Africa</option>
 				<option value={'America'}>America</option>
 				<option value={'Asia'}>Asia</option>

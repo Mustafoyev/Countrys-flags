@@ -4,15 +4,31 @@ import Header from './components/Header/Header';
 import Search from './components/Search/Search';
 import Card from './components/Card/Card';
 import { useState, useEffect } from 'react';
-import { Routes, Route, Link, useNavigate } from 'react-router-dom';
-import Info from './components/Pages/Info';
+import { Routes, Route } from 'react-router-dom';
+import Info from './components/pages/Info';
 import Error from './components/Error/Error';
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import { useContext } from 'react';
+import { ThemeContext } from './components/context/ThemeContext';
+import { language } from './components/language/Language.jsx';
 
 const App = () => {
+	const { theme } = useContext(ThemeContext);
 	const [arr, setArr] = useState([]);
 	const [value, setValue] = useState('');
 	const [selval, setSelval] = useState('');
-	const navigate = useNavigate();
+
+	i18n.use(initReactI18next).init({
+		fallbackLng: window.localStorage.getItem('lang'),
+		interpolation: {
+			escapeValue: false,
+		},
+		resources: {
+			en: { translation: language.en },
+			uz: { translation: language.uz },
+		},
+	});
 
 	useEffect(() => {
 		if (value.length) {
@@ -46,7 +62,8 @@ const App = () => {
 						element={
 							<>
 								<Search getValue={setValue} getSelVal={setSelval} />
-								<section className='card'>
+								<section
+									className={`${theme === 'dark' ? 'card-dark' : 'card'}`}>
 									<div className='container'>
 										<div className='card__inner'>
 											<ul className='card__list'>
@@ -63,12 +80,9 @@ const App = () => {
 					<Route
 						path='/:name'
 						element={
-							<section className='info'>
+							<section className={`${theme === 'dark' ? 'info-dark' : 'info'}`}>
 								<div className='container'>
 									<div className='info__inner'>
-										<button onClick={() => navigate(-1)} className='info__link'>
-											Back
-										</button>
 										<Info />
 									</div>
 								</div>

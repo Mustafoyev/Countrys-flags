@@ -2,6 +2,11 @@
 	padding-bottom: 45px;
 }
 
+.card-dark {
+	padding-bottom: 45px;
+	background-color: #202c36;
+}
+
 .card__list {
 	display: flex;
 	justify-content: center;

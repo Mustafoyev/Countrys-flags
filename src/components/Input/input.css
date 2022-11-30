@@ -8,11 +8,50 @@
 	border-radius: 5px;
 }
 
+.inp-dark {
+	position: relative;
+	width: 100%;
+	max-width: 480px;
+	padding: 18px;
+	background-color: #2b3844;
+	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+	border-radius: 5px;
+}
+
+.inp-dark::before {
+	position: absolute;
+	top: 19px;
+	left: 32px;
+	width: 18px;
+	height: 18px;
+	background-image: url('../../assets/images/icon-search-white.svg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	content: '';
+}
+
+.inp-dark .input::placeholder {
+	color: #fff;
+}
+
+.inp-dark .input {
+	color: #fff;
+}
+
 .input {
 	padding-left: 56px;
 	width: 100%;
 	border: 0;
 	outline: none;
+	background-color: transparent;
+}
+
+.input::placeholder {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 143%;
+	color: #848484;
 }
 
 .input-label::before {

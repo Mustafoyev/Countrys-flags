@@ -1,5 +1,12 @@
 .info {
 	padding-top: 90px;
+	padding-bottom: 65px;
+}
+
+.info-dark {
+	padding-top: 90px;
+	padding-bottom: 70px;
+	background-color: #202c36;
 }
 
 .info__link {
@@ -14,6 +21,22 @@
 	cursor: pointer;
 }
 
+.info__link-dark {
+	position: relative;
+	padding: 10px;
+	padding-left: 62px;
+	padding-right: 30px;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 125%;
+	border: none;
+	background-color: #2b3844;
+	box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
+	border-radius: 6px;
+	color: #fff;
+	cursor: pointer;
+}
+
 .info__link::before {
 	position: absolute;
 	top: 4px;
@@ -21,6 +44,19 @@
 	width: 14px;
 	height: 14px;
 	background-image: url('../../assets/images/Shape.svg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	content: '';
+}
+
+.info__link-dark::before {
+	position: absolute;
+	top: 13px;
+	left: 22px;
+	width: 18px;
+	height: 14px;
+	background-image: url('../../assets/images/Shape-white.svg');
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: center;
@@ -63,6 +99,15 @@
 	color: #111517;
 }
 
+.info__title-dark {
+	margin: 0;
+	margin-bottom: 23px;
+	font-weight: 800;
+	font-size: 32px;
+	line-height: 44px;
+	color: #fff;
+}
+
 .info__left-list {
 	margin: 0;
 	margin-right: 120px;
@@ -77,10 +122,24 @@
 	color: #111517;
 }
 
+.info__title-dark ~ ul > li > .info__item-span {
+	color: #fff;
+}
+
 .info__right-list {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+}
+
+.info__right-dark {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.info__right-dark .info__right-span {
+	color: #fff;
 }
 
 .info__right-span {
@@ -93,6 +152,20 @@
 .info__bottom {
 	display: flex;
 	align-items: center;
+}
+
+.info__bottom-dark {
+	display: flex;
+	align-items: center;
+}
+
+.info__bottom-dark .info__bottom-span {
+	color: #fff;
+}
+
+.info__bottom-dark .info__bottom-link {
+	background-color: #2b3844;
+	color: #ffffff;
 }
 
 .info__bottom-span {
@@ -124,4 +197,12 @@
 	margin: 0 auto;
 	font-size: 68px;
 	line-height: 100%;
+	color: #111517;
+}
+
+.error-dark {
+	margin: 0 auto;
+	font-size: 68px;
+	line-height: 100%;
+	color: #fff;
 }

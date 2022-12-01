@@ -5,7 +5,7 @@ import Search from './components/Search/Search';
 import Card from './components/Card/Card';
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Info from './components/pages/Info.jsx';
+import Info from './components/Pages/Info.jsx';
 import Error from './components/Error/Error';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';

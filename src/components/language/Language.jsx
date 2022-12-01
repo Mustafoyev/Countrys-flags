@@ -22,7 +22,6 @@ export const language = {
 			infocur: 'Currencies',
 			infolan: 'Languages',
 			infobor: 'Border Countries',
-			error: '404 NOT FOUND',
 		},
 	},
 	uz: {
@@ -48,7 +47,6 @@ export const language = {
 			infocur: 'Valyutalar',
 			infolan: 'Tillar',
 			infobor: 'Chegara mamlakatlari',
-			error: "404 M'ALUMOT TOPILMADI",
 		},
 	},
 };
